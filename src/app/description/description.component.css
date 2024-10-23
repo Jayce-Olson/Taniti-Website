@@ -1,0 +1,95 @@
+/* Overall styles for sections */
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f0f0f0; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-column {
+    flex: 1; /* Equal width for both columns */
+    padding: 1rem; /* Spacing inside the columns */
+}
+
+.taniti-image,
+.taniti-bg-image {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Round the corners of images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/*   '/assets/taniti.jpg' */
+.about-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.about-section h2 {
+    font-size: 4em;
+    color: #008C74; /* A vibrant tropical green */
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    font-family: 'Merriweather', serif; /* Elegant font for a classic feel */
+}
+
+.about-section p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #555; /* Softer gray for better readability */
+    margin: 0;
+    padding: 0 20px; /* Responsive padding */
+    z-index: 1;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/taniti.jpg'); /* Optional tropical background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Subtle overlay */
+    z-index: 0;
+}
+
+.about-section::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2); /* Lightened shadow effect */
+    z-index: 0; /* Behind the text */
+    pointer-events: none; /* Ensure it doesn't interfere with text interaction */
+}
+
+.about-section:hover h2 {
+    color: #005F59; /* Darker shade on hover for emphasis */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
