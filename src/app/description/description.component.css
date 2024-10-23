@@ -24,13 +24,16 @@
 }
 
 /*   '/assets/taniti.jpg' */
+
+
+/* */
 .about-section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 50px 30px;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    margin: 80px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 60px 40px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    margin: 100px auto;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -38,25 +41,25 @@
 }
 
 .about-section:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 .about-section h2 {
-    font-size: 4em;
-    color: #008C74; /* A vibrant tropical green */
-    margin-bottom: 15px;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    font-size: 4.5em;
+    color: #007A5E; /* A vibrant tropical teal */
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
     letter-spacing: 2px;
-    font-family: 'Merriweather', serif; /* Elegant font for a classic feel */
+    font-family: 'Lobster', cursive; /* A fun, playful font */
 }
 
 .about-section p {
-    font-size: 1.4em;
-    line-height: 1.6;
-    color: #555; /* Softer gray for better readability */
+    font-size: 1.5em;
+    line-height: 1.7;
+    color: #444; /* Darker gray for better readability */
     margin: 0;
-    padding: 0 20px; /* Responsive padding */
+    padding: 0 30px; /* Responsive padding */
     z-index: 1;
     position: relative;
 }
@@ -68,28 +71,43 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/assets/taniti.jpg'); /* Optional tropical background image */
+    background-image: url('/assets/taniti.jpg'); /* Use an engaging tropical background image */
     background-size: cover;
     background-position: center;
-    opacity: 0.1; /* Subtle overlay */
+    opacity: 0.15; /* Subtle overlay */
     z-index: 0;
 }
 
 .about-section::after {
     content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.2); /* Lightened shadow effect */
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.3); /* Soft white overlay */
     z-index: 0; /* Behind the text */
     pointer-events: none; /* Ensure it doesn't interfere with text interaction */
 }
 
 .about-section:hover h2 {
-    color: #005F59; /* Darker shade on hover for emphasis */
+    color: #005C4D; /* Darker shade on hover for emphasis */
     transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Additional Style for Small Devices */
+@media (max-width: 600px) {
+    .about-section h2 {
+        font-size: 3.5em; /* Responsive heading size */
+    }
+
+    .about-section p {
+        font-size: 1.2em; /* Responsive paragraph size */
+    }
+
+    .about-section {
+        padding: 40px 20px; /* Responsive padding */
+    }
 }
 
