@@ -1,39 +1,44 @@
 /* Overall styles for sections */
 .image-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin: 2rem 0;
-    padding: 1rem;
-    background-color: #f0f0f0; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .image-column {
-    flex: 1; /* Equal width for both columns */
-    padding: 1rem; /* Spacing inside the columns */
+    flex: 1;
+    padding: 10px;
+    transition: transform 0.3s ease;
 }
 
-.taniti-image,
+.image-column:hover {
+    transform: scale(1.05);
+}
+
+.taniti-image, .taniti-bg-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.8);
+}
+
 .taniti-bg-image {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Round the corners of images */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    opacity: 0.8;
 }
 
-/*   '/assets/taniti.jpg' */
 
-
-/* */
+/**/
 .about-section {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 60px 40px;
-    border-radius: 25px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-    max-width: 900px;
-    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 60px auto;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -41,25 +46,26 @@
 }
 
 .about-section:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-section h2 {
-    font-size: 4.5em;
-    color: #007A5E; /* A vibrant tropical teal */
+    font-size: 3em;
+    color: #009f4d;
     margin-bottom: 20px;
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-    letter-spacing: 2px;
-    font-family: 'Lobster', cursive; /* A fun, playful font */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
 }
 
 .about-section p {
-    font-size: 1.5em;
-    line-height: 1.7;
-    color: #444; /* Darker gray for better readability */
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #333;
     margin: 0;
-    padding: 0 30px; /* Responsive padding */
+    padding: 0 20px;
+    font-family: 'Georgia', serif;
+    font-weight: bold; /* Set to bold for emphasis */
     z-index: 1;
     position: relative;
 }
@@ -71,43 +77,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/assets/taniti.jpg'); /* Use an engaging tropical background image */
+    background-image: url('/assets/taniti.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.15; /* Subtle overlay */
+    opacity: 0.1;
     z-index: 0;
 }
-
-.about-section::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.3); /* Soft white overlay */
-    z-index: 0; /* Behind the text */
-    pointer-events: none; /* Ensure it doesn't interfere with text interaction */
-}
-
-.about-section:hover h2 {
-    color: #005C4D; /* Darker shade on hover for emphasis */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Additional Style for Small Devices */
-@media (max-width: 600px) {
-    .about-section h2 {
-        font-size: 3.5em; /* Responsive heading size */
-    }
-
-    .about-section p {
-        font-size: 1.2em; /* Responsive paragraph size */
-    }
-
-    .about-section {
-        padding: 40px 20px; /* Responsive padding */
-    }
-}
-

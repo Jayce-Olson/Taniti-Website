@@ -1,55 +1,41 @@
-:root{ /* for some reason variables are not working for me, I am still new to angular so this could definetely have somthing do to with that */
-    --primary-color:#00ffbb;
-}
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif; /* Consider using a custom font */
-}
-
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    /* background: linear-gradient(135deg, #00ffbb, #009f4d);  */
-    padding: 2rem; 
-    color: #00ffbb; 
-    text-align: center; 
-    /*background-image: url('../../assets/tanitiBG.jpg');*/ /* For some reason this was the only path that worked */
-    background-size: cover; /* Ensures the image covers the header area */
-    background-position: center;
+    text-align: center;
+    padding: 60px;
+    background-color: #F6F3EF;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 40px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
 
 .main-title {
-    font-size: 3rem; 
-    margin: 0; 
-    font-weight: bold; 
-    letter-spacing: 1px;
-}
-
-.sub-title {
-    font-size: 1.5rem;
-    margin-top: 0.5rem; 
-    font-weight: normal; 
-    color: gray;
-    letter-spacing: 0.5px; 
+    font-size: 4.5em;
+    color: #00FFBB;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
 .divider {
-    width: 50%; /* Adjust the width of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: #00ffbb; 
-    margin: 0.5rem 0; /* Space above and below the line */
+    height: 5px;
+    width: 80px;
+    background-color: #00FFBB;
+    margin: 25px auto;
+    border-radius: 2.5px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .main-title {
-        font-size: 2.5rem; 
-    }
-    .sub-title {
-        font-size: 1.2rem; 
-    }
+.sub-title {
+    font-size: 1.8em;
+    color: #007a45;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
+
