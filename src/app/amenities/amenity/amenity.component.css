@@ -1,35 +1,52 @@
 section {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items at the start */
     border: 0.1rem solid #ccc;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     padding: 1.5rem;
-    margin: 2rem 0;
     background-color: #F6F3EF;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 1rem;
+    max-height: 12rem; /* Set a maximum height */
+    overflow: hidden; /* Prevent overflow */
 }
 
 img {
-    max-width: 10rem;
+    max-width: 12rem;
     height: auto;
     border-radius: 0.5rem;
     margin-right: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 div {
     flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between content */
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: #004D3A;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem; /* Reduce bottom margin */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    white-space: nowrap; /* Prevent line breaks */
 }
 
 p {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: #666;
     line-height: 1.5;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    display: -webkit-box; /* For multiline ellipsis */
+    -webkit-line-clamp: 3; /* Limit lines to 3 */
+    -webkit-box-orient: vertical; /* Orient box vertically */
 }
 
 button {
@@ -37,7 +54,7 @@ button {
     color: #F6F3EF;
     border: none;
     border-radius: 0.25rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.25rem;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;

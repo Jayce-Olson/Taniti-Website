@@ -1,0 +1,9 @@
+<section>
+    <h1>Frequently Asked Questions:</h1>
+    <div *ngFor="let q of faq">
+        <h2 (click)="q.show = !q.show" class="faq-question">
+            {{q.question}}
+        </h2>
+        <p *ngIf="q.show" class="faq-answer">{{q.answer}}</p>
+    </div>
+</section>

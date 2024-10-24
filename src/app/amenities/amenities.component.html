@@ -1,7 +1,19 @@
 <section>
-
     <h1>Checkout some of our various Amenities!</h1>
-
-    <app-amenity *ngFor="let amenity of amenities" [title]="amenity.title" [img]="amenity.img"
-        [description]="amenity.description" />
+    <div class="columns">
+        <div class="column">
+            <ng-container *ngFor="let amenity of amenities; let i = index">
+                <app-amenity *ngIf="i % 2 === 0" [title]="amenity.title" [img]="amenity.img"
+                    [description]="amenity.description">
+                </app-amenity>
+            </ng-container>
+        </div>
+        <div class="column">
+            <ng-container *ngFor="let amenity of amenities; let i = index">
+                <app-amenity *ngIf="i % 2 !== 0" [title]="amenity.title" [img]="amenity.img"
+                    [description]="amenity.description">
+                </app-amenity>
+            </ng-container>
+        </div>
+    </div>
 </section>

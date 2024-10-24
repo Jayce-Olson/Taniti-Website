@@ -1,0 +1,21 @@
+
+section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    margin: 2rem 0; /* Optional: Add some margin around the section */
+}
+
+h1 {
+    text-align: center; /* Center the header text */
+    margin-bottom: 1rem; /* Space between the header and the columns */
+}
+
+.columns {
+    display: flex; /* Create two columns */
+    justify-content: space-between; /* Space columns evenly */
+}
+
+.column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Padding inside each column */
+}
