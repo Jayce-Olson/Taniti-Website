@@ -1,0 +1,7 @@
+<section>
+
+    <h1>Checkout some of our various Amenities!</h1>
+
+    <app-amenity *ngFor="let amenity of amenities" [title]="amenity.title" [img]="amenity.img"
+        [description]="amenity.description" />
+</section>

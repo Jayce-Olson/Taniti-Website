@@ -61,7 +61,8 @@
 .about-section p {
     font-size: 1.4em;
     line-height: 1.6;
-    color: #333;
+    color: #004d3a;
+    /* color: #333; */
     margin: 0;
     padding: 0 20px;
     font-family: 'Georgia', serif;

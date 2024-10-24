@@ -20,7 +20,7 @@ button {
   font-size: 17px;
   font-weight: 500;
   color: black; /* Updated */
-  border: 3px solid #00ffbb; /* Updated */
+  border: 3px solid #009f4d; /* Updated */
   border-radius: 8px;
   box-shadow: 0 0 0 #00ffbb; /* Updated */
   transition: all .3s ease-in-out;
